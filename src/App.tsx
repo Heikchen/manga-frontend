@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
-import Navbar from './Navbar/Navbar';
+import Navbar from './Components/Navbar';
 
 
 function App() {
   return (
-    <div >
+    <div className="w-4/5 m-auto">
       <Navbar/>
     </div>
   );
