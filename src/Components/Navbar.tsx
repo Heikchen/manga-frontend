@@ -7,7 +7,7 @@ function Navbar(){
               <h2 className="rotate-12 uppercase font-black text-primary-white-color text-4xl mr-10 ">Anime</h2>
         </div>
         </div>
-        <div className="flex items-center flex-wrap gap-4 w-3/5" >
+        <div className="flex items-center justify-end flex-wrap gap-4 w-3/5" >
             <a>Top Mangas</a>
              <a>Top Animes</a>
              <a>MangaShelf</a>
