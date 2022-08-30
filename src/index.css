@@ -4,6 +4,7 @@
 :root {
   --primary-red-color: #e11818;
   --primary-white-color: #ffff;
+  --primary-black-color: #323232;
 }
 body {
   margin: 0;
