@@ -6,12 +6,16 @@ module.exports = {
       colors: {
         "primary-red-color": "var(--primary-red-color)",
         "primary-white-color": "var(--primary-white-color)",
+        "primary-black-color": "var(--primary-black-color)",
       },
       rotate: {
         348: "348deg",
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
+      },
+      minHeight: {
+        4: "500px",
       },
     },
   },
