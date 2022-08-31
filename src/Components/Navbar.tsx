@@ -11,7 +11,7 @@ function Navbar(){
         </div>
         </Link>
         <div className="flex items-center justify-end flex-wrap gap-4 w-3/5 text-primary-white-color" >
-            <a>Top Mangas</a>
+            <Link to="/top-mangas">Top Mangas</Link>
              <a>Top Animes</a>
              <a>MangaShelf</a>
              <a >AnimeShelf</a>
