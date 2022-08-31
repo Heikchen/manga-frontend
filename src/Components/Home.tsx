@@ -1,3 +1,4 @@
+import BrowseManga from "./BrowseManga";
 import Search from "./Search";
 
 function Home(){
@@ -11,7 +12,9 @@ function Home(){
 <div className="h-12 bg-primary-red-color ">
 <h2 className="uppercase font-bold text-3xl text-primary-white-color ml-3 p-1">Mangas - Top 10</h2>
 </div>
-<div className="h-72"></div>
+<div className="h-72">
+    <BrowseManga />
+</div>
 <div className="h-12 bg-primary-red-color ">
 <h2 className="uppercase font-bold text-3xl text-primary-white-color ml-3 p-1">Animes - Top 10</h2>
 </div>
