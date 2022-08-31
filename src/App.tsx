@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import TopManga from "./Components/TopManga";
 import TopAnime from "./Components/TopAnime";
 import DetailManga from "./Components/DetailManga";
+import DetailAnime from "./Components/DetailAnime";
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/top-mangas" element={<TopManga/>}/>
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/manga" element={<DetailManga/>}/>
+      <Route path="/anime" element={<DetailAnime/>}/>
        </Routes>
       <Footer />
      
