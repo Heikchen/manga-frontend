@@ -13,7 +13,7 @@ function Navbar(){
         <div className="flex items-center justify-end flex-wrap gap-4 w-3/5 text-primary-white-color" >
             <Link to="/top-mangas">Top Mangas</Link>
              <Link to="/top-animes">Top Animes</Link>
-             <a>MangaShelf</a>
+             <Link to="/mangashelf">MangaShelf</Link>
              <a >AnimeShelf</a>
              <button className="bg-primary-red-color w-20 h-9 rounded-2xl text-primary-white-color" >Login</button>
         </div>

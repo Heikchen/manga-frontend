@@ -7,6 +7,7 @@ import TopManga from "./Components/TopManga";
 import TopAnime from "./Components/TopAnime";
 import DetailManga from "./Components/DetailManga";
 import DetailAnime from "./Components/DetailAnime";
+import MangaShelf from "./Components/MangaShelf";
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/top-mangas" element={<TopManga/>}/>
       <Route path="/top-animes" element={<TopAnime/>}/>
+      <Route path="/mangashelf" element={<MangaShelf/>}/>
       <Route path="/manga" element={<DetailManga/>}/>
       <Route path="/anime" element={<DetailAnime/>}/>
        </Routes>
