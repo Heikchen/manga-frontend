@@ -2,12 +2,12 @@ import React from "react";
 function TopManga(){
     const [page, setPage]= React.useState<number>(10);
     const [isDisabled, setIsDisabled]=React.useState<boolean>(true);
-    const handleClickNext =()=>{
+    const handleClickNext =():void=>{
         setPage((page)=>page+10)
         setIsDisabled(false);
         console.log(page)
     }
-     const handleClickPrevious =()=>{
+     const handleClickPrevious =():void=>{
         if (page > 10){
         setPage((page)=>page-10)
         console.log(page)

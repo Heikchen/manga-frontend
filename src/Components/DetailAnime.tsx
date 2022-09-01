@@ -40,11 +40,11 @@ function DetailAnime(){
 <div className="col-span-2 sm:col-span-1 border-t-4 pt-4">
 <h1 className="text-3xl mb-4">Recommandation</h1>
 <div className="flex gap-6 w-full justify-center flex-wrap">
-<div className="flex flex-col items-center w-1/4">
+<div className="flex flex-col items-center w-48">
     <h1 className="text-xl">One Piece</h1>
     <img  className="border-t-2 pt-2"src="https://api-cdn.myanimelist.net/images/manga/2/253146l.jpg"/>
 </div>
-<div className="flex flex-col items-center w-1/4">
+<div className="flex flex-col items-center w-48">
     <h1 className="text-xl">One Piece</h1>
     <img  className="border-t-2 pt-2"src="https://api-cdn.myanimelist.net/images/manga/2/253146l.jpg"/>
 </div>

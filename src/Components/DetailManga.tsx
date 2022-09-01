@@ -1,8 +1,8 @@
 function DetailManga(){
     return(<div className="font-quicksand h-fit w-full text-primary-white-color grid grid-rows-auto grid-cols-2 sm:grid-cols-1 gap-6 mt-6 mb-6">
         <div className="w-full flex flex-col items-center">
-            <button className="bg-primary-red-color w-48 h-10 rounded-3xl mb-4 uppercase">Add to Mangashelf</button>
         <img className="w-90 rounded-2xl mb-6"src="https://api-cdn.myanimelist.net/images/manga/3/249658l.jpg" />
+         <button className="bg-primary-red-color w-48 h-10 rounded-3xl mb-4 uppercase">Add to Mangashelf</button>
         <div className="w-full text-lg leading-9">
         <h1 className="text-2xl border-b-2 text-center">Information</h1>
         <h2 className="tracking-wider mt-2 ml-4">Type: Manga</h2>
@@ -41,11 +41,11 @@ function DetailManga(){
 <div className="col-span-2 sm:col-span-1 border-t-4 pt-4">
 <h1 className="text-3xl mb-4">Recommandation</h1>
 <div className="flex gap-6 w-full justify-center flex-wrap">
-<div className="flex flex-col items-center w-1/4">
+<div className="flex flex-col items-center w-48">
     <h1 className="text-xl">One Piece</h1>
     <img  className="border-t-2 pt-2"src="https://api-cdn.myanimelist.net/images/manga/2/253146l.jpg"/>
 </div>
-<div className="flex flex-col items-center w-1/4">
+<div className="flex flex-col items-center w-48">
     <h1 className="text-xl">One Piece</h1>
     <img  className="border-t-2 pt-2"src="https://api-cdn.myanimelist.net/images/manga/2/253146l.jpg"/>
 </div>
