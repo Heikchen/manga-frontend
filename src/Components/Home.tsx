@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import BrowseManga from "./BrowseManga";
 import Search from "./Search";
 
@@ -5,8 +6,10 @@ function Home(){
     return(<div className="min-h-4 w-full mt-6 font-quicksand">
         <Search/>
         <div className="flex justify-between w-full mb-6 gap-6">
-<button className="text-primary-white-color bg-primary-red-color w-1/2 h-12 uppercase font-bold text-2xl sm:text-lg">MangaShelf</button>
-<button className="text-primary-white-color bg-primary-red-color w-1/2 h-12 uppercase font-bold text-2xl sm:text-lg">AnimeShelf</button>
+          
+<button className=" text-primary-white-color bg-primary-red-color  w-1/2 h-12 uppercase font-bold text-2xl sm:text-lg active:scale-95">MangaShelf</button>
+
+<button className="text-primary-white-color bg-primary-red-color  w-1/2 h-12 uppercase font-bold text-2xl sm:text-lg active:scale-95">AnimeShelf</button>
 </div>
 
 <div className="h-12 bg-primary-red-color ">

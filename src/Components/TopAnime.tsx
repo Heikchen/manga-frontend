@@ -20,8 +20,8 @@ function TopAnime(){
             <h1 className="font-semibold uppercase text-3xl pt-1 ml-3 sm:text-lg sm:p-2">Top {page} Animes</h1>
         </div>
         <div className="flex gap-6">
-        <button onClick={handleClickPrevious}className="bg-primary-red-color text-primary-white-color uppercase w-36 h-10 rounded-2xl mt-6 mb-6 disabled:opacity-50" disabled={isDisabled}>Previous</button>
-        <button onClick={handleClickNext}className="bg-primary-red-color text-primary-white-color uppercase w-36 h-10 rounded-2xl mt-6 mb-6">Next</button>
+        <button onClick={handleClickPrevious}className="bg-primary-red-color text-primary-white-color uppercase w-36 h-10 rounded-2xl mt-6 mb-6 disabled:opacity-50 active:enabled:scale-95" disabled={isDisabled}>Previous</button>
+        <button onClick={handleClickNext}className="bg-primary-red-color text-primary-white-color uppercase w-36 h-10 rounded-2xl mt-6 mb-6 active:enabled:scale-95">Next</button>
         </div>
     </div>)
 }
