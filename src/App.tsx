@@ -1,13 +1,14 @@
 import React from "react";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
 import TopManga from "./Components/TopManga";
 import TopAnime from "./Components/TopAnime";
 import DetailManga from "./Components/DetailManga";
 import DetailAnime from "./Components/DetailAnime";
 import MangaShelf from "./Components/MangaShelf";
+import AnimeShelf from "./Components/AnimeShelf";
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <Route path="/top-mangas" element={<TopManga/>}/>
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/mangashelf" element={<MangaShelf/>}/>
+       <Route path="/animeshelf" element={<AnimeShelf/>}/>
       <Route path="/manga" element={<DetailManga/>}/>
       <Route path="/anime" element={<DetailAnime/>}/>
        </Routes>

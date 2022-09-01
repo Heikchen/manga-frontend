@@ -14,7 +14,7 @@ function Navbar(){
             <Link to="/top-mangas">Top Mangas</Link>
              <Link to="/top-animes">Top Animes</Link>
              <Link to="/mangashelf">MangaShelf</Link>
-             <a >AnimeShelf</a>
+             <Link to="/animeshelf" >AnimeShelf</Link>
              <button className="bg-primary-red-color w-20 h-9 rounded-2xl text-primary-white-color" >Login</button>
         </div>
     </nav>)
