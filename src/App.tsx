@@ -9,6 +9,7 @@ import DetailManga from "./Components/DetailManga";
 import DetailAnime from "./Components/DetailAnime";
 import MangaShelf from "./Components/MangaShelf";
 import AnimeShelf from "./Components/AnimeShelf";
+import Popup from "./Components/Popup";
 
 
 
@@ -22,8 +23,9 @@ function App() {
       <Route path="/top-mangas" element={<TopManga/>}/>
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/mangashelf" element={<MangaShelf/>}/>
-       <Route path="/animeshelf" element={<AnimeShelf/>}/>
+      <Route path="/animeshelf" element={<AnimeShelf/>}/>
       <Route path="/manga" element={<DetailManga/>}/>
+      <Route path="/popup" element={<Popup/>}/>
       <Route path="/anime" element={<DetailAnime/>}/>
        </Routes>
       <Footer />
