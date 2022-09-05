@@ -15,6 +15,17 @@ import SearchPage from "./Components/SearchPage";
 
 
 function App() {
+  const [myMangas, setMyMangas]=React.useState<any>([]);
+
+  const addToMangashelf=(mangaToAdd:any):void=>{
+const doesMangaExistInShelf:any = myMangas.find(
+      (mangas:any) => mangas.id === mangaToAdd.id
+    );
+    if(!doesMangaExistInShelf){
+      setMyMangas([...myMangas,{...mangaToAdd, volume:[]}])
+      console.log(myMangas)
+    }
+  }
   return (<BrowserRouter>
   <div className='bg-primary-black-color'>
     <div className="w-4/5 m-auto bg-primary-black-color">
@@ -25,7 +36,7 @@ function App() {
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/mangashelf" element={<MangaShelf/>}/>
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
-      <Route path="/manga/:id" element={<DetailManga/>}/>
+      <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf}/>}/>
       <Route path="/popup" element={<Popup/>}/>
       <Route path="/search" element={<SearchPage/>}/>
       <Route path="/anime/:id" element={<DetailAnime/>}/>
