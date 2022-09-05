@@ -10,6 +10,7 @@ import DetailAnime from "./Components/DetailAnime";
 import MangaShelf from "./Components/MangaShelf";
 import AnimeShelf from "./Components/AnimeShelf";
 import Popup from "./Components/Popup";
+import SearchPage from "./Components/SearchPage";
 
 
 
@@ -26,6 +27,7 @@ function App() {
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
       <Route path="/manga/:id" element={<DetailManga/>}/>
       <Route path="/popup" element={<Popup/>}/>
+      <Route path="/search" element={<SearchPage/>}/>
       <Route path="/anime/:id" element={<DetailAnime/>}/>
        </Routes>
       <Footer />
