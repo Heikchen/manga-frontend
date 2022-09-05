@@ -26,7 +26,7 @@ function App() {
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
       <Route path="/manga" element={<DetailManga/>}/>
       <Route path="/popup" element={<Popup/>}/>
-      <Route path="/anime" element={<DetailAnime/>}/>
+      <Route path="/anime/:id" element={<DetailAnime/>}/>
        </Routes>
       <Footer />
      

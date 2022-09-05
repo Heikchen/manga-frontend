@@ -17,13 +17,13 @@ function Home(){
 </div>
 
 <div className="h-12 bg-primary-red-color ">
-<h2 className="uppercase font-bold text-3xl sm:text-lg sm:p-2 text-primary-white-color ml-3 p-1">Mangas - Top 10</h2>
+<Link to="/top-mangas"><h2 className="uppercase font-bold text-3xl sm:text-lg sm:p-2 text-primary-white-color ml-3 p-1">Mangas - Top 10</h2></Link>
 </div>
-<div className="flex h-80 items-center  w-full overflow-x-scroll gap-4">
+<div className="">
  <BrowseManga  />
 </div>
 <div className="h-12 bg-primary-red-color ">
-<h2 className="uppercase font-bold text-3xl  sm:text-lg sm:p-2 text-primary-white-color ml-3 p-1">Animes - Top 10</h2>
+<Link to="/top-animes"><h2 className="uppercase font-bold text-3xl  sm:text-lg sm:p-2 text-primary-white-color ml-3 p-1">Animes - Top 10</h2></Link>
 </div>
 <div className="h-80">
     <BrowseAnime/>
