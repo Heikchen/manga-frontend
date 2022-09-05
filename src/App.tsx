@@ -34,7 +34,7 @@ const doesMangaExistInShelf:any = myMangas.find(
       <Route path="/" element={<Home/>}/>
       <Route path="/top-mangas" element={<TopManga/>}/>
       <Route path="/top-animes" element={<TopAnime/>}/>
-      <Route path="/mangashelf" element={<MangaShelf/>}/>
+      <Route path="/mangashelf" element={<MangaShelf myMangas={myMangas}/>}/>
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
       <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf}/>}/>
       <Route path="/popup" element={<Popup/>}/>
