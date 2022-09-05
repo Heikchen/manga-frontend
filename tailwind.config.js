@@ -20,6 +20,9 @@ module.exports = {
         60: "240px",
         12: "48px",
       },
+      borderRadius: {
+        50: "50%",
+      },
     },
   },
   plugins: [],
