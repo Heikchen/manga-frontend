@@ -19,7 +19,7 @@ function Home(){
 <div className="h-12 bg-primary-red-color ">
 <Link to="/top-mangas"><h2 className="uppercase font-bold text-3xl sm:text-lg sm:p-2 text-primary-white-color ml-3 p-1">Mangas - Top 10</h2></Link>
 </div>
-<div className="">
+<div className="h-80">
  <BrowseManga  />
 </div>
 <div className="h-12 bg-primary-red-color ">

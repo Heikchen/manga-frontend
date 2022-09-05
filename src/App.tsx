@@ -24,7 +24,7 @@ function App() {
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/mangashelf" element={<MangaShelf/>}/>
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
-      <Route path="/manga" element={<DetailManga/>}/>
+      <Route path="/manga/:id" element={<DetailManga/>}/>
       <Route path="/popup" element={<Popup/>}/>
       <Route path="/anime/:id" element={<DetailAnime/>}/>
        </Routes>

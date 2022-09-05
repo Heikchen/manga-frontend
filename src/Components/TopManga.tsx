@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 import Spinner from "./Spinner";
+
 function TopManga(){
     const [page, setPage]= React.useState<number>(10);
     const [isDisabled, setIsDisabled]=React.useState<boolean>(true);
@@ -42,7 +44,7 @@ React.useEffect(()=>{fetchMangas()},[page])
             <h1 className="text-primary-white-color uppercase font-semibold text-3xl pt-1 ml-3 sm:text-lg sm:p-2">Top {page} Mangas</h1>
         </div>
         <div className="flex gap-4 flex-wrap justify-center ">
-         {isLoading ? (<Spinner/>):(mangas.map((topmangasObject:any)=>(<div key={topmangasObject.node.id} className="group w-48 relative h-72 shrink-0"><img className="h-72 m-auto" src={topmangasObject.node.main_picture.medium}/><h1 className="invisible group-hover:visible absolute bottom-6 w-full text-primary-white-color flex items-center justify-center min-h-12 text-2xl bg-primary-red-color text-center">{topmangasObject.node.title}</h1><h1 className="invisible group-hover:visible absolute bottom-60 left-4 text-2xl p-1 text-center min-w-8 bg-primary-red-color text-primary-white-color">{topmangasObject.ranking.rank}</h1></div>)))}  
+         {isLoading ? (<Spinner/>):(mangas.map((topmangasObject:any)=>(<Link to ={`/manga/${topmangasObject.node.id}`}><div key={topmangasObject.node.id} className="group w-48 relative h-72 shrink-0"><img className="h-72 m-auto" src={topmangasObject.node.main_picture.medium}/><h1 className="invisible group-hover:visible absolute bottom-6 w-full text-primary-white-color flex items-center justify-center min-h-12 text-2xl bg-primary-red-color text-center">{topmangasObject.node.title}</h1><h1 className="invisible group-hover:visible absolute bottom-60 left-4 text-2xl p-1 text-center min-w-8 bg-primary-red-color text-primary-white-color">{topmangasObject.ranking.rank}</h1></div></Link>)))}  
         </div>
         <div className="flex gap-6">
         <button onClick={handleClickPrevious}className="bg-primary-red-color text-primary-white-color uppercase w-36 h-10 rounded-2xl mt-6 mb-6 disabled:opacity-50 active:enabled:scale-95" disabled={isDisabled}>previous</button>
