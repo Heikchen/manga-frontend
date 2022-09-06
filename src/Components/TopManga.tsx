@@ -27,13 +27,15 @@ React.useEffect(()=>{fetchMangas()},[page])
         setPage((page)=>page+10)
         setOffset((offset)=>offset+10)
         setIsDisabled(false);
+        window.scrollTo(0, 0);
         console.log(page)
     }
      const handleClickPrevious =():void=>{
         if (page > 10){
-        setPage((page)=>page-10)
-      setOffset((offset)=>offset-10)
-        console.log(page)
+        setPage((page)=>page-10);
+      setOffset((offset)=>offset-10);
+        console.log(page);
+        window.scrollTo(0, 0);
     if(page === 20){
        setIsDisabled(true); 
     }}

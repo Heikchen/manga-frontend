@@ -16,6 +16,11 @@ import SearchPage from "./Components/SearchPage";
 
 function App() {
   const [myMangas, setMyMangas]=React.useState<any>([]);
+  const [visible, setVisible]=React.useState<boolean>(false)
+
+React.useEffect(()=>{
+  setVisible(false)
+},[])
 
   const addToMangashelf=(mangaToAdd:any):void=>{
 const doesMangaExistInShelf:any = myMangas.find(
@@ -24,20 +29,30 @@ const doesMangaExistInShelf:any = myMangas.find(
     if(!doesMangaExistInShelf){
       setMyMangas([...myMangas,{...mangaToAdd, volume:[]}])
       console.log(myMangas)
-    }
+      setVisible(true);
+      
+    }else{ setVisible(true);}
   }
+
+const handleReady =():void=>{
+setVisible(!visible);
+console.log(visible)
+  }  
+
+
+
   return (<BrowserRouter>
   <div className='bg-primary-black-color'>
     <div className="w-4/5 m-auto bg-primary-black-color">
-      <Navbar/>
+      <Navbar />
          <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/top-mangas" element={<TopManga/>}/>
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/mangashelf" element={<MangaShelf myMangas={myMangas}/>}/>
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
-      <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf}/>}/>
-      <Route path="/popup" element={<Popup/>}/>
+      <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf} visible={visible}  handleReady={handleReady}/>}/>
+      <Route path="/popup" element={<Popup handleReady={handleReady}/>}/>
       <Route path="/search" element={<SearchPage/>}/>
       <Route path="/anime/:id" element={<DetailAnime/>}/>
        </Routes>

@@ -26,12 +26,14 @@ React.useEffect(()=>{fetchAnimes()},[page])
         setPage((page)=>page+10)
         setOffset((offset)=> offset +10)
         setIsDisabled(false);
+        window.scrollTo(0, 0)
         console.log(page)
     }
      const handleClickPrevious =():void=>{
         if (page > 10){
         setPage((page)=>page-10)
          setOffset((offset)=> offset -10)
+         window.scrollTo(0, 0)
         console.log(page)
     if(page === 20){
         setIsDisabled(true)
