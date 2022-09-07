@@ -37,8 +37,6 @@ setVisible(false);
 
 
 const addVolumeToManga =(volumes:number, mangaVolume:any, event:any):any=>{
- console.log(event.target.getAttribute("data-key"));
- console.log(volumes);
   const newVolume = myMangas.map((manga:any)=>{
     const findManga:any = manga.volume;
     console.log(findManga)
@@ -50,12 +48,11 @@ const addVolumeToManga =(volumes:number, mangaVolume:any, event:any):any=>{
         console.log(doesVolumeExistInShelf)
     if(doesVolumeExistInShelf === undefined){
         manga.volume.push(volumes);
-        event.target.setAttribute("class","h-8 w-12 rounded-3xl active:scale-95 bg-primary-red-color opacity-60" );
+     event.target.setAttribute("style","background-color: var(--primary-red-color)" );  
       return{...manga}
   } else{
     const remove = findManga.filter((item:any)=>item !== doesVolumeExistInShelf );
-    console.log(remove);
-    event.target.setAttribute("class","h-8 w-12 rounded-3xl active:scale-95 bg-primary-red-color opacity-100" );
+    event.target.setAttribute("style","background-color: var(--primary-black-color)" );
     manga.volume = remove;
   return{...manga}}
   setMyMangas(newVolume);
@@ -74,7 +71,7 @@ console.log(newVolume);}
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/mangashelf" element={<MangaShelf myMangas={myMangas}/>}/>
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
-      <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf} visible={visible} addVolumeToManga={addVolumeToManga} handleReady={handleReady}/>}/>
+      <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf} visible={visible} addVolumeToManga={addVolumeToManga} handleReady={handleReady} myMangas={myMangas}/>}/>
       <Route path="/popup" element={<Popup />}/>
       <Route path="/search" element={<SearchPage/>}/>
       <Route path="/anime/:id" element={<DetailAnime/>}/>
