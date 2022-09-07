@@ -39,7 +39,8 @@ props.handleReady();
 return(<div className="relative ">
    {props.visible &&(<div className="absolute w-full h-screen flex justify-center">
     <div >
-    <Popup handleReady={props.handleReady} volume={detailManga.num_volumes}/></div></div>)} 
+    <Popup  color={props.color} active={props.active} handleReady={props.handleReady} addVolumeToManga={props.addVolumeToManga}
+    volume={detailManga.num_volumes} manga={detailManga}/></div></div>)} 
   
     {isLoading ? (<Spinner />):(<div className="font-quicksand h-fit w-full text-primary-white-color grid grid-rows-auto grid-cols-2 sm:grid-cols-1 gap-6 mt-6 mb-6">
         <div className="w-full flex flex-col items-center">

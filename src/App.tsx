@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -16,13 +16,10 @@ import SearchPage from "./Components/SearchPage";
 
 function App() {
   const [myMangas, setMyMangas]=React.useState<any>([]);
-  const [visible, setVisible]=React.useState<boolean>(false)
+  const [visible, setVisible]=React.useState<boolean>(false);
+ 
 
-React.useEffect(()=>{
-  setVisible(false)
-},[])
-
-  const addToMangashelf=(mangaToAdd:any):void=>{
+const addToMangashelf=(mangaToAdd:any):void=>{
 const doesMangaExistInShelf:any = myMangas.find(
       (mangas:any) => mangas.id === mangaToAdd.id
     );
@@ -35,12 +32,38 @@ const doesMangaExistInShelf:any = myMangas.find(
   }
 
 const handleReady =():void=>{
-setVisible(!visible);
-console.log(visible)
+setVisible(false);
   }  
 
 
+const addVolumeToManga =(volumes:number, mangaVolume:any, event:any):any=>{
+ console.log(event.target.getAttribute("data-key"));
+ console.log(volumes);
+  const newVolume = myMangas.map((manga:any)=>{
+    const findManga:any = manga.volume;
+    console.log(findManga)
+   if(manga.id === mangaVolume.id ){
+      console.log(manga)
+      const doesVolumeExistInShelf:any = findManga.find(
+      (mangas:any) => mangas === volumes
+    );
+        console.log(doesVolumeExistInShelf)
+    if(doesVolumeExistInShelf === undefined){
+        manga.volume.push(volumes);
+        event.target.setAttribute("class","h-8 w-12 rounded-3xl active:scale-95 bg-primary-red-color opacity-60" );
+      return{...manga}
+  } else{
+    const remove = findManga.filter((item:any)=>item !== doesVolumeExistInShelf );
+    console.log(remove);
+    event.target.setAttribute("class","h-8 w-12 rounded-3xl active:scale-95 bg-primary-red-color opacity-100" );
+    manga.volume = remove;
+  return{...manga}}
+  setMyMangas(newVolume);
+console.log(newVolume);}
+})
 
+
+}
   return (<BrowserRouter>
   <div className='bg-primary-black-color'>
     <div className="w-4/5 m-auto bg-primary-black-color">
@@ -51,8 +74,8 @@ console.log(visible)
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/mangashelf" element={<MangaShelf myMangas={myMangas}/>}/>
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
-      <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf} visible={visible}  handleReady={handleReady}/>}/>
-      <Route path="/popup" element={<Popup handleReady={handleReady}/>}/>
+      <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf} visible={visible} addVolumeToManga={addVolumeToManga} handleReady={handleReady}/>}/>
+      <Route path="/popup" element={<Popup />}/>
       <Route path="/search" element={<SearchPage/>}/>
       <Route path="/anime/:id" element={<DetailAnime/>}/>
        </Routes>

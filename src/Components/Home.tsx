@@ -6,20 +6,12 @@ import BrowseManga from "./BrowseManga";
 import Search from "./Search";
 
 function Home(){
-    let navigate = useNavigate();
     
-    const handleKeyDown = (event:any):void => {
-    if (event.keyCode === 13) {
-      
-
-      navigate("/search", {
-        state: {
-            search: event.target.value,
-        },
-      });}}
+    
+    
     
     return(<div className="min-h-4 w-full mt-6 font-quicksand overflow-hidden">
-        <Search change={handleKeyDown}/>
+        <Search />
         <div className="flex justify-between w-full mb-6 gap-6">
           
 <button className=" text-primary-white-color bg-primary-red-color  w-1/2 h-12 uppercase font-bold text-2xl sm:text-lg active:scale-95">MangaShelf</button>
