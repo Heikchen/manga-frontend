@@ -23,6 +23,9 @@ module.exports = {
       borderRadius: {
         50: "50%",
       },
+      width: {
+        140: "560px",
+      },
     },
   },
   plugins: [],

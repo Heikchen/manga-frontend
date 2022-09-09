@@ -69,7 +69,7 @@ console.log(newVolume);}
       <Route path="/" element={<Home/>}/>
       <Route path="/top-mangas" element={<TopManga/>}/>
       <Route path="/top-animes" element={<TopAnime/>}/>
-      <Route path="/mangashelf" element={<MangaShelf myMangas={myMangas}/>}/>
+      <Route path="/mangashelf" element={<MangaShelf myMangas={myMangas} visible={visible} addVolumeToManga={addVolumeToManga} handleReady={handleReady}/>}/>
       <Route path="/animeshelf" element={<AnimeShelf/>}/>
       <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf} visible={visible} addVolumeToManga={addVolumeToManga} handleReady={handleReady} myMangas={myMangas}/>}/>
       <Route path="/popup" element={<Popup />}/>
