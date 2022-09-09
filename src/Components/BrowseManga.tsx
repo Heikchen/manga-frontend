@@ -15,7 +15,7 @@ function BrowseManga(){
     React.useEffect(()=>{fetchMangas()},[])
 return(
 <div className="flex gap-4 h-80 items-center w-full overflow-x-scroll ">
-{mangasTop.map((mangasObject:any)=>(<Link to={`/manga/${mangasObject.node.id}`}><div className=" flex justify-center group shrink-0 h-72 w-48 relative"><img key ={mangasObject.node.id} className=" h-72 w-auto shrink-0 center" src={mangasObject.node.main_picture.large}/><h1 className="invisible group-hover:visible  absolute bottom-4 left-0 bg-primary-red-color w-full min-h-12 text-center flex items-center text-lg justify-center text-primary-white-color">{mangasObject.node.title}</h1></div></Link>))}
+{mangasTop.map((mangasObject:any)=>(<Link to={`/manga/${mangasObject.node.id}`}><div className=" flex justify-center group shrink-0 h-72 w-48 relative"><img key={mangasObject.node.id} className=" h-72 w-auto shrink-0 center" src={mangasObject.node.main_picture.large}/><h1 key={mangasObject.node.title} className="invisible group-hover:visible  absolute bottom-4 left-0 bg-primary-red-color w-full min-h-12 text-center flex items-center text-lg justify-center text-primary-white-color">{mangasObject.node.title}</h1></div></Link>))}
     </div>)
 }
 export default BrowseManga;

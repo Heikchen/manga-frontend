@@ -11,11 +11,11 @@ function Navbar(){
         </div>
         </Link>
         <div className="flex items-center justify-end flex-wrap gap-4 w-3/5 text-primary-white-color" >
-            <Link   to="/top-mangas">Top Mangas</Link>
+             <Link  to="/top-mangas">Top Mangas</Link>
              <Link to="/top-animes">Top Animes</Link>
              <Link to="/mangashelf">MangaShelf</Link>
              <Link to="/animeshelf" >AnimeShelf</Link>
-             <button className="bg-primary-red-color w-20 h-9 rounded-2xl text-primary-white-color" >Login</button>
+             <Link to ="/login"><button className="bg-primary-red-color w-20 h-9 rounded-2xl text-primary-white-color active:scale-95" >Login</button></Link>
         </div>
     </nav>)
 }
