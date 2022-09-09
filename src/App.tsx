@@ -66,6 +66,11 @@ if (doesAnimeExistInShelf === undefined){
   console.log(myAnimes);
 }
 }
+
+const removeAnime=(animeToRemove:any):void=>{
+const newList:any = myAnimes.filter((itemAnime:any)=> itemAnime.id !== animeToRemove.id);
+setMyAnimes(newList);
+}
   return (<BrowserRouter>
   <div className='bg-primary-black-color'>
     <div className="w-4/5 m-auto bg-primary-black-color">
@@ -75,7 +80,7 @@ if (doesAnimeExistInShelf === undefined){
       <Route path="/top-mangas" element={<TopManga/>}/>
       <Route path="/top-animes" element={<TopAnime/>}/>
       <Route path="/mangashelf" element={<MangaShelf myMangas={myMangas} visible={visible} addVolumeToManga={addVolumeToManga} handleReady={handleReady}/>}/>
-      <Route path="/animeshelf" element={<AnimeShelf myAnimes={myAnimes} />}/>
+      <Route path="/animeshelf" element={<AnimeShelf myAnimes={myAnimes} removeAnime={removeAnime}/>}/>
       <Route path="/manga/:id" element={<DetailManga addToMangashelf={addToMangashelf} visible={visible} addVolumeToManga={addVolumeToManga} handleReady={handleReady} myMangas={myMangas}/>}/>
       <Route path="/search" element={<SearchPage/>}/>
       <Route path="/anime/:id" element={<DetailAnime addToAnime={addToAnime} myAnimes={myAnimes} />}/>
