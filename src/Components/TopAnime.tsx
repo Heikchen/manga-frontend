@@ -21,6 +21,7 @@ function TopAnime(){
         .then((response) => {setAnimes(response.data.data);
         setLoading(false)})
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 React.useEffect(()=>{fetchAnimes()},[page])
     const handleClickNext =():void=>{
         setPage((page)=>page+10)
@@ -44,7 +45,7 @@ React.useEffect(()=>{fetchAnimes()},[page])
             <h1 className="font-semibold uppercase text-3xl pt-1 ml-3 sm:text-lg sm:p-2">Top {page} Animes</h1>
         </div>
          <div className="flex gap-4 flex-wrap justify-center ">
-           {isLoading ? (<Spinner/>):(animes.map((topanimesObject:any)=>(<Link to={`/anime/${topanimesObject.node.id}`}><div key={topanimesObject.node.id} className="group w-48 relative h-72 shrink-0"><img className="h-72 m-auto" src={topanimesObject.node.main_picture.medium}/><h1 className="invisible group-hover:visible absolute bottom-6 w-full text-primary-white-color flex items-center justify-center min-h-12 text-2xl bg-primary-red-color text-center">{topanimesObject.node.title}</h1><h1 className="invisible group-hover:visible absolute bottom-60 left-4 text-2xl p-1 text-center min-w-8 bg-primary-red-color text-primary-white-color">{topanimesObject.ranking?.rank}</h1></div></Link>)))} 
+           {isLoading ? (<Spinner/>):(animes.map((topanimesObject:any)=>(<Link to={`/anime/${topanimesObject.node.id}`}><div key={topanimesObject.node.id} className="group w-48 relative h-72 shrink-0"><img className="h-72 m-auto" src={topanimesObject.node.main_picture.medium} alt={topanimesObject.node.title}/><h1 className="invisible group-hover:visible absolute bottom-6 w-full text-primary-white-color flex items-center justify-center min-h-12 text-2xl bg-primary-red-color text-center">{topanimesObject.node.title}</h1><h1 className="invisible group-hover:visible absolute bottom-60 left-4 text-2xl p-1 text-center min-w-8 bg-primary-red-color text-primary-white-color">{topanimesObject.ranking?.rank}</h1></div></Link>)))} 
         </div>
         <div className="flex gap-6">
         <button onClick={handleClickPrevious}className="bg-primary-red-color text-primary-white-color uppercase w-36 h-10 rounded-2xl mt-6 mb-6 disabled:opacity-50 active:enabled:scale-95" disabled={isDisabled}>Previous</button>

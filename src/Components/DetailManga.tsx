@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import {useParams, Link} from "react-router-dom"
 import Spinner from "./Spinner";
-import { prototype } from "events";
 import Popup from "./Popup";
 
 

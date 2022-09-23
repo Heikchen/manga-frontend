@@ -29,7 +29,7 @@ window.scrollTo(0, 0);},[urlParamId])
 
     return(<div>
         {isLoading ? (<Spinner/>):(<div className="font-quicksand h-fit w-full text-primary-white-color grid grid-rows-auto grid-cols-2 sm:grid-cols-1 gap-6 mt-6 mb-6"><div className="w-full flex flex-col items-center">
-        <img className="w-90 rounded-2xl mb-6"src={detailAnime.main_picture?.large} />
+        <img className="w-90 rounded-2xl mb-6"src={detailAnime.main_picture?.large} alt={detailAnime.title} />
         <button onClick={()=>props.addToAnime(detailAnime)}className="bg-primary-red-color w-48 h-10 rounded-3xl mb-4 uppercase active:scale-95">Add to Animeshelf</button>
         <div className="w-full text-lg leading-9">
         <h1 className="text-2xl border-b-2 text-center">Information</h1>
@@ -69,7 +69,7 @@ window.scrollTo(0, 0);},[urlParamId])
 <div className="flex gap-6 w-full mb-6 justify-center flex-wrap">
 {recommendations.map((recommendationsObject:any)=>(<Link to={`/anime/${recommendationsObject.node.id}`}><div key={recommendationsObject.node.id}className="flex flex-col shrink-0 items-center  justify-center w-72 h-80">
     <h1 className="text-xl h-8 overflow-hidden text-center">{recommendationsObject.node.title}</h1>
-    <img  className="border-t-2 pt-2 h-72"src={recommendationsObject.node.main_picture?.medium}/>
+    <img  className="border-t-2 pt-2 h-72"src={recommendationsObject.node.main_picture?.medium} alt={recommendationsObject.node.title}/>
 </div></Link>))}
 </div></div></div>)}
     </div>)

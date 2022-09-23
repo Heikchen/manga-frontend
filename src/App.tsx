@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -9,7 +9,6 @@ import DetailManga from "./Components/DetailManga";
 import DetailAnime from "./Components/DetailAnime";
 import MangaShelf from "./Components/MangaShelf";
 import AnimeShelf from "./Components/AnimeShelf";
-import Popup from "./Components/Popup";
 import SearchPage from "./Components/SearchPage";
 import Login from "./Components/Login";
 
@@ -38,7 +37,7 @@ setVisible(false);
 
 
 const addVolumeToManga =(volumes:number, mangaVolume:any, event:any):any=>{
-  const newVolume = myMangas.map((manga:any)=>{
+  const newVolume = myMangas.map((manga:any):void=>{
     const findManga:any = manga.volume;
     console.log(findManga)
    if(manga.id === mangaVolume.id ){
@@ -55,7 +54,7 @@ const addVolumeToManga =(volumes:number, mangaVolume:any, event:any):any=>{
     const remove = findManga.filter((item:any)=>item !== doesVolumeExistInShelf );
     event.target.setAttribute("style","background-color: var(--primary-black-color)" );
     manga.volume = remove;
-  return{...manga}}
+  return{...manga}};
   setMyMangas(newVolume);
 console.log(newVolume);}
 })

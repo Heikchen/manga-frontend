@@ -15,7 +15,7 @@ function BrowseAnime(){
     React.useEffect(()=>{fetchMangas()},[])
 return(
 <div key={AnimesTop.node?.id} className="flex gap-4 h-80 items-center w-full overflow-x-scroll ">
-{AnimesTop.map((animesObject:any)=>(<Link to={`/anime/${animesObject.node.id}`}><div key={animesObject.node.id} className="group shrink-0 h-72 w-48 relative"><img key ={animesObject.node.id} className=" h-72 w-auto shrink-0" src={animesObject.node.main_picture.large}/><h1 key={animesObject.node.title} className="invisible group-hover:visible  absolute bottom-4 left-0 bg-primary-red-color w-full min-h-12 text-center flex items-center text-lg justify-center text-primary-white-color">{animesObject.node.title}</h1></div></Link>))}
+{AnimesTop.map((animesObject:any)=>(<Link to={`/anime/${animesObject.node.id}`}><div key={animesObject.node.id} className="group shrink-0 h-72 w-48 relative"><img key ={animesObject.node.id} className=" h-72 w-auto shrink-0" src={animesObject.node.main_picture.large} alt={animesObject.node.title}/><h1 key={animesObject.node.title} className="invisible group-hover:visible  absolute bottom-4 left-0 bg-primary-red-color w-full min-h-12 text-center flex items-center text-lg justify-center text-primary-white-color">{animesObject.node.title}</h1></div></Link>))}
     </div>)
 }
 export default BrowseAnime;

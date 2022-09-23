@@ -19,9 +19,10 @@ props.myMangas.map((myMangasObject:any)=>{
         console.log(myMangasObject)
         if(myMangasObject.volume.length >0){ 
         setActive(myMangasObject.volume);
-        console.log(active)
+        return active;
     }
     }}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
  )},[])   
 
 
