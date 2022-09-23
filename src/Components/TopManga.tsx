@@ -13,7 +13,7 @@ function TopManga(){
     
     const fetchMangas =():void => {
         setLoading(true);
-        axios.get(`http://localhost:7020/manga/ranking?ranking_type=all&limit=10&offset=${offset}`, {
+        axios.get(`https://manga-backend-server.herokuapp.com/manga/ranking?ranking_type=all&limit=10&offset=${offset}`, {
             headers: {
                 'x-mal-client-id': 'b67859a9dc4d5c8d747d16656e7d4f19'
             }

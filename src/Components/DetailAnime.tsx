@@ -14,7 +14,7 @@ function DetailAnime(props:any){
 
     const fetchDetailAnime=():void =>{
         setLoading(true)
-        axios.get(`http://localhost:7020/anime/${urlParamId}?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_scoring_users,media_type,status,genres,num_episodes,start_season,rating,pictures,background,recommendations'`,
+        axios.get(`https://manga-backend-server.herokuapp.com/anime/${urlParamId}?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_scoring_users,media_type,status,genres,num_episodes,start_season,rating,pictures,background,recommendations'`,
         {headers: {
                 'x-mal-client-id': 'b67859a9dc4d5c8d747d16656e7d4f19'
             }})

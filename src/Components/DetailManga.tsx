@@ -18,7 +18,7 @@ const [recommendations, setRecommandations]=React.useState<any>([]);
 
 const fetchDetailManga=():void =>{
         setLoading(true)
-        axios.get(`http://localhost:7020/manga/${urlParamId}?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_list_users,num_scoring_users,nsfw,created_at,updated_at,media_type,status,genres,my_list_status,num_volumes,num_chapters,authors{first_name,last_name},pictures,background,related_anime,related_manga,recommendations,serialization{name}'`,
+        axios.get(`https://manga-backend-server.herokuapp.com/manga/${urlParamId}?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_list_users,num_scoring_users,nsfw,created_at,updated_at,media_type,status,genres,my_list_status,num_volumes,num_chapters,authors{first_name,last_name},pictures,background,related_anime,related_manga,recommendations,serialization{name}'`,
         {headers: {
                 'x-mal-client-id': 'b67859a9dc4d5c8d747d16656e7d4f19'
             }})

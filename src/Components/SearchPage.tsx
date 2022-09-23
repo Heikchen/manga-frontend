@@ -51,7 +51,7 @@ const fetchSearch = (offsetsearch:number) => {
     setLoading(true);
     axios
       .get(
-        `http://localhost:7020/${source}?q=${location.state.search}&offset=${offsetsearch}`,{headers: {
+        `https://manga-backend-server.herokuapp.com/${source}?q=${location.state.search}&offset=${offsetsearch}`,{headers: {
                 'x-mal-client-id': 'b67859a9dc4d5c8d747d16656e7d4f19'
             }}
       )
